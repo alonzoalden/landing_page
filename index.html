@@ -109,7 +109,7 @@
                 <div class="main-header">
                     <h1>SIGN UP FOR OUR DEALS</h1>
                 </div>
-                <form>
+                <form id="contact-form" method="post">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -127,5 +127,41 @@
                 </form>
             </div>
         </div>
+        <script>
+    window.addEventListener("load", function () {
+        function sendData() {
+            var XHR = new XMLHttpRequest();
+            
+            data.email = document.getElementById("exampleInputEmail1").value;
+            data.password = document.getElementById("exampleInputPassword1").value;
+            var FD = JSON.stringify(data);
+            // Define what happens on successful data submission
+            XHR.addEventListener("load", function(event) {
+            alert(event.target.responseText);
+            });
+
+            // Define what happens in case of error
+            XHR.addEventListener("error", function(event) {
+            alert('Oops! Something went wrong.');
+            });
+
+            // Set up our request
+            XHR.open("POST", "https://example.com/cors.php");
+
+            // The data sent is what the user provided in the form
+            XHR.send(FD);
+        }
+        
+        // Access the form element...
+        var data = {};
+
+        var form = document.getElementById("contact-form");
+        // ...and take over its submit event.
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            sendData();
+        });
+    });
+        </script>
     </body>
 </html>
