@@ -1,0 +1,96 @@
+body {
+    -webkit-font-smoothing: antialiased;
+}
+.navbar {
+    height: 100px;
+}
+.container {
+    
+}
+.main {
+    margin: 0 auto;
+}
+.main-header {
+    text-align: center;
+    margin: 50px;
+}
+
+.row {
+    margin-top: 20px;
+    display: flex;
+}
+.image-container {
+    height: 300px;
+    overflow: hidden;
+    flex: 1;
+}
+.image-bg {
+    position: absolute;
+    height: auto;
+    width: 115%;
+    z-index: 1;
+    max-width: none !important;
+    max-width: 100%;
+    min-height: inherit;
+    max-height: inherit;
+    display: inline !important;
+    border: 0;
+    border-top-color: initial;
+    border-top-style: initial;
+    border-top-width: 0px;
+    border-right-color: initial;
+    border-right-style: initial;
+    border-right-width: 0px;
+    border-bottom-color: initial;
+    border-bottom-style: initial;
+    border-bottom-width: 0px;
+    border-left-color: initial;
+    border-left-style: initial;
+    border-left-width: 0px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    vertical-align: middle;
+}
+
+
+.image-section {
+    margin-top: 30px;
+}
+
+.image-content {
+    z-index: 10;
+    color: #fff;
+    position: absolute;
+    height: 350px;
+    width: 100%;
+}
+.text {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+}
+.bottom {
+    bottom: 0;
+}
+@media screen and (max-width: 2000px) {
+    .image {
+        max-width: 100% !important;
+        max-height: 100%;
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 602px) {
+    .image {
+        width: 800px;
+    }   
+}
+
+.form-section {
+    margin-top: 30px;
+    border: 1px solid black;
+    padding: 40px;
+}
